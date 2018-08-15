@@ -8,7 +8,7 @@ body {
   /* Margin bottom by footer height */
   font-family: 'Open Sans', 'sans-serif';
   font-size: 14px;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
 }
 .footer {
   position: absolute;
@@ -42,11 +42,56 @@ vertical-align: baseline;;
 a.navbar-brand-img>img {
   vertical-align: bottom;
 }
-img {
-  display: block;
+/*
+.section-overview img {
   max-width: 100%;
   height: auto;
+  vertical-align: top;
+}*/
+
+/*add classes for image location*/
+/*
+.float-left {display:inline; float:left; margin:5px 15px 5px 0; max-width: 47%;}
+.float-right {float:right; margin:5px 0 5px 15px; max-width: 47%;}
+.aligncenter {display:block; margin:10px auto;}
+.border {background:#ccc; border:4px solid #f0f0f0; color:#333; padding:1px;}
+*/
+
+figure {
+  margin: 0.8rem auto;
 }
+
+img[src$='?center']
+{
+    display: block;
+    margin: 0.8rem auto; /* you can replace the vertical '0.7rem' by
+                          whatever floats your boat, but keep the
+                            horizontal 'auto' for this to work */
+    /* whatever else styles you fancy here */
+}
+
+img[src$='?floatleft']
+{
+    float:left;
+    margin:10px 15px 15px 0;
+    /* whatever else styles you fancy here */
+    max-width: 47%;
+}
+img[src$='?floatright']
+{
+    float:right;
+    margin:10px 0 15px 15px;
+    /* whatever else styles you fancy here */
+    max-width: 47%;
+}
+/*
+.float-right {
+  float:right;
+}
+
+.float-left {
+  float:left;
+}*/
 
 .nopadding {
   padding: 0 !important;
@@ -85,7 +130,7 @@ iframe {
 }
 #Email.fieldInvalid {
   border: 1px solid #ff0000;
-}  
+}
 code.has-jax {
   font: inherit;
   font-size: 100%;
@@ -93,6 +138,10 @@ code.has-jax {
   border: inherit;
   }
 
+.share-box {
+      display: block;
+      margin-bottom: 30px;
+  }
 
 .share-box a{
     padding: 0 0 0 5px;
